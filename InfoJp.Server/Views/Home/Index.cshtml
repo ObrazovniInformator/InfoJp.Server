@@ -1,0 +1,336 @@
+﻿@using InfoJp.Server.Models
+@{
+    ViewData["Title"] = "Informator Javnih Preduzeca";
+    List<Vesti> vesti = ViewBag.Vesti;
+    int brojac = 0;
+}
+
+@section metatags
+{
+   
+    <meta name="description" content="Informator javnih preduzeca je specijalizovani mesecni casopis javnih preduzeca Srbije kreiran, da bude informativni podsetnik
+          i edukativni oslonac u radu javnih preduzeca Srbije." />
+    <meta name="keywords" content="Javna preduzeca, javnih preduzeca, javna, javno, casopis, radni odnosi, zarade, javne nabavke, janih nabavki, janim nabavkama, zarade, obrazovni informator, informator, informacije, vesti o javnim preduzecima" />
+    <meta name="robots" content="index, follow" />
+    <meta name="DC.title" content="Informator javnih preduzeca" />
+}
+<style>
+    .overlay::after {
+        background-color: #b9454500;
+    }
+
+    .one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter {
+        margin: 0 0 0 1%;
+    }
+</style>
+<nav id="gornjimeni">
+
+    <a href="http://www.obrazovni.rs" id="slikalogo">  <img src="~/images/demo/LogoOI.png" /> </a>
+
+
+</nav>
+
+<div class="bgded overlay" style="background-image: url('../.././images/demo/backgrounds/IjpCoverPozadina.png');">
+    <div id="pageintro" class="hoc clear">
+        <article>
+            <h1 style="background-color: #5c0909; color: #ffffff; border-radius: 7px; text-transform: none; position: absolute; top: 0; margin-top: 4%; margin-left: 13%; height: 50px; padding: 1% ">12 ШТАМПАНИХ БРОЈЕВА ГОДИШЊЕ</h1>
+        </article>
+
+        <!-- ################################################################################################ -->
+        <article>
+            <h3 class="heading" style="text-transform:none"><span style="color: #db336b; font-weight: 600">   @*ИНФОРМАТОР*@ </span><br /> <span style="color: #db336b !important; font-weight: 400">   @*ЈАВНИХ ПРЕДУЗЕЋА*@</span></h3>
+            <p style="background-color: #5c0909; color:#ffffff; border-radius: 7px; margin-top:15% ">Ту смо да вам доставимо све информације које су потребне за ваше пословање, у право време на правом месту.<br /> Претплатом добијате 12 часописа, консултације са нашим стурчњацима из области економије и права, као и велики број вебинара и семинара на актуелне теме. <br /><a href="~/oblastiUrednici">Кликните како бисте сазнали више о нашим стручњацима</a> </p>
+            <footer><a class="btn" href="~/pdf/InformatorJavnihPreduzecaBr1.PDF" target="_blank" style="border-color: #ffffff;  border-radius: 20px; text-align: center;">Погледајте први број часописа <i class="fa fa-envelope"></i></a></footer>
+        </article>
+        <!-- ################################################################################################ -->
+    </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+    <main class="hoc container clear">
+        <!-- main body -->
+        <!-- ################################################################################################ -->
+        <section id="introblocks">
+            <ul class="nospace group btmspace-80 elements elements-four">
+                <li class="one_quarter">
+                    <article>
+                        <a href="#"><i class="fas fa-hand-rock" style="color: #b945455c"></i></a>
+                        <h6 class="heading" style="text-transform:none">Ту смо за вас</h6>
+                        <p>Све информације на једном месту везане за јавни сектор</p>
+                    </article>
+                </li>
+                <li class="one_quarter">
+                    <article>
+                        <a href="#"><i class="fas fa-dove" style="color: #b945455c"></i></a>
+                        <h6 class="heading" style="text-transform:none">Одговарамо на ваша питања</h6>
+                        <p>Ту смо да вам помогнемо са сваком вашом недоумицом</p>
+                    </article>
+                </li>
+                <li class="one_quarter">
+                    <article>
+                        <a href="#"><i class="fas fa-history" style="color: #b945455c"></i></a>
+                        <h6 class="heading" style="text-transform:none">Доступност</h6>
+                        <p>Можете нас позвати како бисмо заједно са вама решили проблем</p>
+                    </article>
+                </li>
+                <li class="one_quarter">
+                    <article>
+                        <a href="#"><i class="fas fa-heartbeat" style="color: #b945455c"></i></a>
+                        <h6 class="heading" style="text-transform:none">"ИнХаус" консалтинг</h6>
+                        <p>Увек нас можете посетити и причати са нашим стручњацима из области права и економије</p>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        @*<section id="services" class="hoc container clear">
+            <a href="~/pdf/Prijava_seminar_oktobar_javna preduzeca.pdf" target="_blank"><img src="~/images/demo/Seminari/JP Final - 2 - strana 1.png" style="margin: 0" alt="Susreti Ustanova" /></a> <br />
+            <a href="~/pdf/Prijava_seminar_oktobar_javna preduzeca.pdf" target="_blank"><img src="~/images/demo/Seminari/JP Final - 2 - strana 2.png" style="margin: 0" alt="Susreti Ustanova" /> </a>
+
+        </section>*@
+        <br /><br />
+
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <!-- ################################################################################################ -->
+        <h1 class="heading font-x2" style="text-align: center; color: #5c0909;">ДНЕВНИ КОНСАЛТИНГ</h1>
+        <h1 class="heading" style="text-align:center">
+            ОДГОВОРИ НА ПИТАЊА ТЕЛЕФОНОМ ИЗ
+            ПРАВНО-ЕКОНОМСКОГ ПОСЛОВАЊА
+        </h1>
+        <p style="text-align:center">
+            011/3286 489; 011/30 36 531; 011/30 36 532; 011/26 31 222;
+            011/2624 434, 011/3286-542;<br /><br />
+
+            Сваког радног дана од 7:30 до 15:30
+        </p>
+        <h1 style="text-align: center; text-transform: none; color: #5c0909">Оператер ће вас повезати са нашим стручњацима: </h1>
+        <div class="scrollable">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="background-color: #921717">Област</th>
+                        <th style="background-color: #921717; text-transform: none;">Име и презиме</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Календар пословних обавеза</td>
+                        <td>Невена Баћковић</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Из делатности јавних
+                            предузећа
+                        </td>
+                        <td>
+                            Проф. др Саша
+                            Трандафиловић
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Радни односи</td>
+                        <td>Др Александар Антић</td>
+                    </tr>
+
+                    <tr>
+                        <td>Јавне набавке</td>
+                        <td>Снежана Шокчанић</td>
+                    </tr>
+                    <tr>
+                        <td>Имовински односи</td>
+                        <td>Петар Вујадиновић</td>
+                    </tr>
+                    <tr>
+                        <td>Финансије и рачуноводство</td>
+                        <td>
+                            Невена Баћковић и
+                            Регина Раделић
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Порези</td>
+                        <td>
+                            Зорица Кузмановић
+                        </td>
+                    </tr>
+
+            </table>
+            <p style="text-align:center">
+                ОДГОВОРИ НА ПИТАЊА ПУТЕМ МЕЈЛА<br />
+                Сваког радног дана од 7:30 до 15:30 <br />
+                <b>javnapreduzeca@obrazovni.rs</b>
+            </p>
+        </div>
+
+        <br /><br />
+
+
+        <!-- ################################################################################################ -->
+        <section class="group shout">
+            <h1 style="text-align: center; text-transform:none">Текстови из актуелног броја:</h1>
+            <figure class="one_half first">
+                <img src="~/images/demo/SlikaTeksta1.jpg" alt="">
+                <figcaption class="heading">
+                    <a href="~/tekst1">
+                        ПОВЕРАВАЊЕ ОБАВЉАЊА КОМУНАЛНЕ
+                        ДЕЛАТНОСТИ
+                    </a>
+                </figcaption>
+            </figure>
+            <figure class="one_half">
+                <img src="~/images/demo/SlikaTeksta2.jpg" alt="">
+                <figcaption class="heading"><a href="~/tekst2">РАД ВАН РАДНОГ ОДНОСА</a></figcaption>
+            </figure>
+        </section>
+        <!-- ################################################################################################ -->
+        <!-- / main body -->
+        <div class="clear"></div>
+    </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="bgded overlay light" style="background-image:url('../.././images/demo/SlikaTeksta1.jpg');">
+    <section id="services" class="hoc container clear">
+        <!-- ################################################################################################ -->
+        <div class="sectiontitle">
+            <p class="nospace font-xs" style="color: #921717">Одговори на актуелна питања</p>
+            <h6 class="heading font-x2" style="color: #921717; text-transform: none;">Питања и одговори</h6>
+        </div>
+        <ul class="nospace group elements elements-three">
+            <li class="one_third">
+                <article>
+                    <a href="#"><i class="fas fa-hourglass-half"></i></a>
+                    <h6 class="heading" style="text-transform: none;">
+                        Поштовани, да ли лицу које је тестирано на ковид и није позитивно а отворено му је боловање са шифрама U07.2, R53, Z29.0 i K59.9 треба обрачунавати боловање у износу од 100% или 65%. У питању је запослени у средњем образовању ?
+                    </h6>
+                    <p>
+                        Имајући у виду информације које сте ми доставили моје мишљење је
+                        следеће:
+                        Уколико је запосленом одређена мера изолације или самоизолације због сумње на постојање корона вируса, имајући у виду члан 24а Посебног колективног уговора за запослене у основним и средњим школама и домовима ученика, мишљења сам да запослени има право на 100% накнаде зараде током привремене спречености за рад.<br>
+                        Др Антић Александар<br>
+                        Одговорни уредник и правни саветник за област радних односа
+                    </p>
+                </article>
+            </li>
+            <li class="one_third">
+                <article>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                    <h6 class="heading" style="text-transform: none;">Да ли смо у обавези да покренемо конкурс за запошљавање ДО  27.07.2021. ГОДИНЕ, ИЛИ ТО МОЖЕМО ДА УЧИНИМО ДО КРАЈА ТЕКУЋЕ ГОДИНЕ ДО ДЕЦЕМБРА 2021. ГОДИНЕ?</h6>
+                    <p>Чланом 7.  Уредбе о поступку за прибављање сагласности за ново  запошљавање и додатно радно ангажовање прописано је да сагласност Комисије добијене у текућој календарској години могу се реализовати у наредној календарској години, уколико од  дана давања сагласности до дана покретања поступка за пријем новозапослених у складу са законом није протекло више од 90 дана.</p>
+                </article>
+            </li>
+            <li class="one_third">
+                <article>
+                    <a href="#"><i class="fas fa-sliders-h"></i></a>
+                    <h6 class="heading" style="text-transform: none;">Намера је да се замене извршиоци на одредјеним радним местима на којима су исти услови,  између Градске управе и ЈКП чији је оснивач Град. Да ли је могуће преузимање без конкурса?</h6>
+                    <p>Имајући у виду одредбе Закона о запосленима у аутономним покрајинама и јединицама локалне самоуправе, преузимање је могуће из градске управе у јавно предузеће под условом да се сагласи запослени и да се ради о одговарајућем радном месту. Преузимање из јавног предузећа у градску управу није могуће, пошто је супротно одредбама Закона о запосленима у аутономним покрајинама и јединицама локалне самоуправе.</p>
+                </article>
+            </li>
+            <li class="one_third">
+                <article>
+                    <a href="#"><i class="fas fa-tty"></i></a>
+                    <h6 class="heading" style="text-transform: none;">Одговорност код послова Јавних набавки у школама (секретар или шеф рачуноводства).Да ли је сем плана јавних набавки школа у обавези и да донесе план набавки на које се закон не примењује и који је рок? Шта је обавеза шефа рачуноводства а шта правника?</h6>
+                    <p>
+                        Одредбама  чл. 49.  Закона о јавним набавкама („Сл. гл. РС” број 91/19 – даље: Закон)  прописана је обавеза наручиоца  да посебним актом ближе уреди начин планирања, спровођења поступка јавне набавке и праћења извршења уговора о јавној набавци (начин комуникације, правила, обавезе и одговорност лица и организационих јединица), начин планирања и спровођења набавки на које се закон не примењује, као и набавки друштвених и других посебних услуга.
+                        Акт из става 2. овог члана наручилац је дужан да објави на својој интернет страници.
+                    </p>
+                </article>
+            </li>
+        </ul>
+        <!-- ################################################################################################ -->
+    </section>
+</div>
+
+
+
+<div class="wrapper row3">
+    <section class="hoc container clear">
+        <!-- ################################################################################################ -->
+        <div class="sectiontitle">
+            <p class="nospace font-xs">Најактуелније</p>
+            <h6 class="heading font-x2">Вести</h6>
+        </div>
+        <ul id="latest" class="nospace group">
+            @for(int i=0; i<3; i++){
+            <li class="one_third">
+                <article>
+                    <a class="imgover" href="~/vest/@vesti[i].Id"><img src="~/images/demo/vestiSlike/@vesti[i].Slika" alt=""></a>
+                    <ul class="nospace meta clear">
+                        <li><i class="fas fa-user"></i> <a href="Vest.html">Особа</a></li>
+                        <li><i class="fas fa-comments"></i> <a href="Vest.html">Коментари</a></li>
+                    </ul>
+                    <div class="excerpt">
+                        <time datetime="01-08-2021">@vesti[i].Datum</time>
+                        <p class="heading"><a href="~/vest1">@vesti[i].Naslov</a></p>
+                    </div>
+                </article>
+            </li>
+            
+            }
+
+            @*<li class="one_third">
+            <article>
+                <a class="imgover" href="~/vest2"><img src="~/images/demo/SlikaVest2.jpg" alt=""></a>
+                <ul class="nospace meta clear">
+                    <li><i class="fas fa-user"></i> <a href="#">Особа</a></li>
+                    <li><i class="fas fa-comments"></i> <a href="Vest2.html">Коментари</a></li>
+                </ul>
+                <div class="excerpt">
+                    <time datetime="01-08-2021">01.08.2021</time>
+                    <p class="heading"><a href="~/vest2">Привремено обустављена набавка новог система наплате за Инфостан</a></p>
+                </div>
+            </article>
+        </li>
+        <li class="one_third">
+            <article>
+                <a class="imgover" href="~/vest3"><img src="~/images/demo/SlikaVesti3.jpg" alt=""></a>
+                <ul class="nospace meta clear">
+                    <li><i class="fas fa-user"></i> <a href="Vest3.html">Особа</a></li>
+                    <li><i class="fas fa-comments"></i> <a href="Vest3.html">Коментари</a></li>
+                </ul>
+                <div class="excerpt">
+                    <time datetime="01-08-2021">01.08.2021</time>
+                    <p class="heading"><a href="~/vest3">СНС: Од 2012. у нашој држави и граду Новом Саду све је транспарентно.</a></p>
+                </div>
+            </article>
+        </li>*@
+        </ul>
+        <!-- ################################################################################################ -->
+    </section>
+</div>
+
+
+
+<div class="wrapper row2">
+    <section id="ctdetails" class="hoc container clear">
+        <!-- ################################################################################################ -->
+        <div class="sectiontitle">
+            <p class="nospace font-xs">Уколико имате било каквих питања</p>
+            <h6 class="heading font-x2" id="kontaktirajteNas" style="text-transform: none;">Контактирајте нас</h6>
+        </div>
+        <figure class="one_half first">
+            <ul class="nospace clear">
+                <li class="block clear"><a href="tel:011 328 6489 "><i class="fas fa-phone"></i></a> <span><strong>Позовите нас на број:</strong> 011/3286 489</span></li>
+                <li class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Пошаљите нам мејл:</strong> javnapreduzeca@obrazovni.rs</span></li>
+                <li class="block clear"><a href="#"><i class="fas fa-map-marker-alt"></i></a> <span><strong>Дођите и посетите нас:</strong> на адреси: <a href="#">Цара Лазара 5А</a></span></li>
+            </ul>
+        </figure>
+        <article class="one_half">
+            <h6 class="heading" style="text-transform: none;">Можете се пријавити за добијање новина из рада Образовног информатора</h6>
+            <p class="nospace btmspace-15">Обавештења о вебинарима, попустима, семинарима и најновијим вестима.</p>
+            <form asp-controller="Home" asp-action="SendMessage" method="post">
+                <fieldset>
+                    <legend>Новине (вести, вебинари, семинари...):</legend>
+                    <input name="imeUstanove" type="text" value="" placeholder="Име установе">
+                    <input name="emailUstanove" type="text" value="" placeholder="Емаил">
+                    <button type="submit" value="submit">Потврди</button>
+                </fieldset>
+            </form>
+        </article>
+        <!-- ################################################################################################ -->
+    </section>
+</div>

@@ -1,0 +1,37 @@
+﻿@model InfoJp.Server.Models.Vesti
+
+@{
+    ViewData["Title"] = "Vest";
+}
+
+<div class="bgded overlay" style="background-image:url('../.././images/demo/backgrounds/VestiSlika.jpg'); ">
+<div id="pageintro" class="hoc clear" style="height: 30%; padding: 70px 0 70px;">
+    <!-- ################################################################################################ -->
+    <article>
+        <h3 class="heading">@Model.Naslov</h3>
+    </article>
+    <!-- ################################################################################################ -->
+</div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+    <main class="hoc container clear">
+        <article style="margin-left: 20%; margin-right:20%">
+            <a class="imgover" href="#"><img src="~/images/demo/vestiSlike/@Model.Slika" alt="@Model.Naslov"></a><br>
+            <div class="excerpt">
+                <br>
+                <time datetime="01-08-2021">@Model.Datum</time><br><br>
+                <p class="heading"><a href="#">@Model.Naslov</a></p>
+            </div>
+           @Html.Raw(@Model.Teskst)
+            <div>
+        </article>
+
+
+
+
+
+
+    </main>

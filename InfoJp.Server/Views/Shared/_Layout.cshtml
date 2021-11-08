@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="sr">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+    <title>Informator Javnih Preduzeca</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="copyright" content="Obrazovni Informator kuca znanja za uspesno poslovanje, Andjelija i Luka programeri." />
+    @RenderSection("metatags",false)
+    <link href="~/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+        #gornjimeni {
+            background: #5c0909;
+            color: #ffffff;
+            height: 77px;
+            display: block;
+            width: 100% !important;
+        }
+
+        #slikalogo {
+            margin-left: 38%;
+            margin-top: 0.5%;
+        }
+
+
+        .container {
+            padding: 0px 0px !important;
+        }
+
+        .logoname::first-letter, .logoname span {
+            margin: 0px;
+            font-size: 2.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body id="top">
+    <div class="wrapper row1" style="background-color: white !important; color: #5c0909">
+
+
+        <header id="header" class="hoc clear">
+
+
+
+
+
+            <div id="logo" class="fl_left">
+                <!-- ################################################################################################ -->
+                <h1 class="logoname" style="margin-right: 0px; text-transform:none; text-decoration: none"><a href="~/Home/Index" style="text-decoration: none"> <img class="logoname" style="width: 60px; margin-right:8px" src="~/images/demo/LogoSaPetZvezdica.png" />Информатор јавних предузећа</a></h1>
+                <!-- ################################################################################################ -->
+            </div>
+            <partial name="_LoginPartial" />
+        </header>
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <div class="bgded overlay row4" style="background-image: url(''); background-color: #5c0909!important ">
+        <footer id="footer" class="hoc clear">
+            <!-- ################################################################################################ -->
+            <div class="one_quarter first">
+                <h1 class="logoname" style="text-transform: none;"><a href="~/Home/Index">Информатор jавних предузећа</a></h1>
+                <p>Специјализовани месечни часопис јавних предузећа Србије. <a href="~/recUrednika">&hellip;</a>]</p>
+                <ul class="faico clear">
+                    <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
+                </ul>
+            </div>
+            <div class="one_quarter">
+                <h6 class="heading">Странице</h6>
+                <ul class="nospace linklist">
+                    <li><a href="~/Home/Index">Почетна страна</a></li>
+                    <li><a href="~/recUrednika">Реч уредника</a></li>
+                    <li><a href="~/kalendarObaveza">Календар обавеза</a></li>
+                    <li><a href="~/vesti">Вести</a></li>
+                    <li><a href="~/seminari" target="">Семинари</a></li>
+                    <li><a href="~/vebinari">Вебинари</a></li>
+                    <li><a href="~/Home/Index#kontaktirajteNas">Контакт</a></li>
+                </ul>
+            </div>
+            <div class="one_quarter">
+                @*<h6 class="heading" style="text-transform: none;">Новости на инстаграму</h6>
+                    <ul class="nospace clear latestimg">
+                        <li><a class="imgover" href="#"><img src="~/images/demo/SlikaTeksta1.jpg" alt=""></a></li>
+                        <li><a class="imgover" href="#"><img src="~/images/demo/SlikaTeksta2.jpg" alt=""></a></li>
+                        <li><a class="imgover" href="#"><img src="~/images/demo/SlikaFuter.jpg" alt=""></a></li>
+                        <li><a class="imgover" href="#"><img src="~/images/demo/futerSlika.jpg" alt=""></a></li>
+                        <li><a class="imgover" href="#"><img src="~/images/demo/SlikaTeksta1.jpg" alt=""></a></li>
+                        <li><a class="imgover" href="#"><img src="~/images/demo/SlikaTeksta1.jpg" alt=""></a></li>
+                        <li><a class="imgover" href="#"><img src="~/images/demo/SlikaTeksta1.jpg" alt=""></a></li>
+                        <li><a class="imgover" href="#"><img src="~/images/demo/SlikaTeksta1.jpg" alt=""></a></li>
+                        <li><a class="imgover" href="#"><img src="~/images/demo/SlikaTeksta1.jpg" alt=""></a></li>
+                    </ul>*@
+            </div>
+            <div class="one_quarter">
+                <h6 class="heading">Часопис</h6>
+                <ul class="nospace linklist">
+                    <li>
+                        <article>
+                            <p class="nospace btmspace-10"><a href="#">Часопис ће излазити једном месечно, и то почетком месеца.</a></p>
+
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <p class="nospace btmspace-10"><a href="~/oblastiUrednici">Теме и области часописа можете погледати овде</a></p>
+
+                        </article>
+                    </li>
+                </ul>
+            </div>
+            <!-- ################################################################################################ -->
+        </footer>
+    </div>
+    <hr />
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row5">
+        <div id="copyright" class="hoc clear">
+            <!-- ################################################################################################ -->
+            <p class="fl_left">Copyright &copy; 2021 - All Rights Reserved - <a href="#">informatorjavnihpreduzeca</a></p>
+            <p class="fl_right">Template by <a target="_blank" title="template">Andja i Luka</a></p>
+            <!-- ################################################################################################ -->
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+    <!-- JAVASCRIPTS -->
+    <script src="~/layout/scripts/jquery.min.js"></script>
+    <script src="~/layout/scripts/jquery.backtotop.js"></script>
+    <script src="~/layout/scripts/jquery.mobilemenu.js"></script>
+    <!-- Homepage specific -->
+    <script src="~/layout/scripts/jquery.easypiechart.min.js"></script>
+    <!-- / Homepage specific -->
+</body>
+</html>

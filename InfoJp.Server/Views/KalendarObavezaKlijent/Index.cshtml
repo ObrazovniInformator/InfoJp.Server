@@ -1,0 +1,54 @@
+﻿@model IEnumerable<InfoJp.Server.Models.KalendarObaveza>
+
+@{
+    ViewData["Title"] = "Kalendar obaveza";
+}
+
+<div class="bgded overlay" style="background-image:url(''); ">
+    <div id="pageintro" class="hoc clear" style="height: 30%; padding: 70px 0 70px;">
+        <!-- ################################################################################################ -->
+        <article>
+            <h3 class="heading">КАЛЕНДАР ОБАВЕЗА</h3>
+        </article>
+        <!-- ################################################################################################ -->
+    </div>
+</div>
+
+
+<div class="bgded overlay light" style="background-image:url('');">
+    <section id="services" class="hoc container clear">
+        <!-- ################################################################################################ -->
+        <div class="sectiontitle">
+
+        </div>
+        <ul class="nospace group elements elements-three">
+            @foreach(KalendarObaveza obaveza in Model)
+            {
+
+
+            <li class="one_third">
+                <article>
+                    <a href="#"><i class="fas fa-hourglass-half"></i></a>
+                    <h6 class="heading">
+                       @obaveza.NaslovniDatum
+                    </h6>
+                    <p>
+                        <b>Корисник/Орган :</b> @obaveza.KorisnikOrgan
+                    </p>
+                    <p>
+                        <b>Обавеза :</b> @obaveza.Obaveza
+                    </p>
+                    <p>
+                        <b>Основ - пропис :</b>
+                        @obaveza.OsnovPropis
+
+                    </p>
+
+                </article>
+            </li>
+            }
+
+        </ul>
+        <!-- ################################################################################################ -->
+    </section>
+</div>

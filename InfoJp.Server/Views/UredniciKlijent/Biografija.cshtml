@@ -1,0 +1,39 @@
+﻿@model InfoJp.Server.Models.Urednici
+
+@{
+    ViewData["Title"] = "Biografija";
+}
+
+<div class="bgded overlay" style="background-image:url(''); ">
+    <div id="pageintro" class="hoc clear" style="height: 30%; padding: 70px 0 70px;">
+        <!-- ################################################################################################ -->
+        <article>
+            <h3 class="heading">БИОГРАФИЈА</h3>
+        </article>
+        <!-- ################################################################################################ -->
+    </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<main>
+    <div class="group btmspace-50 demo" style="background-color:white;">
+        <div class="one_half first">
+            <img style="width: 282px; height:400px; margin-left: 40%;" src="~/images/demo/autoriSlike/@Model.Slika">
+            <p style="margin-left: 40%;"><i>@Model.ImeIprezime</i></p>
+            <p style="margin-left: 40%;"><i>@Model.Oblast</i></p>
+        </div>
+        <div class="one_half" style="color: #5c0909!important; margin-left:1%!important">
+            <p id="deoTeksta">
+             @Html.Raw(@Model.Biografija)
+            </p>
+            
+        </div>
+    </div>
+
+
+
+
+
+
+</main>

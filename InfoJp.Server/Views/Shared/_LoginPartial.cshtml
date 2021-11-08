@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<nav id="mainav" class="fl_right">
+    <ul class="clear">
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
+            </li>
+            <li class="nav-item">
+                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                </form>
+            </li>
+        }
+        else
+        {
+            <li><a href="~/Home/Index">Почетна страна</a></li>
+            <li><a href="~/recUrednika">Реч уредника</a></li>
+            <li><a href="~/oblastiUrednici">Области и уредници</a></li>
+            <li><a href="~/kalendarObaveza">Календар обавеза</a> </li>
+            <li><a href="~/vesti">Вести</a></li>
+            <li><a href="~/seminari">Семинари</a></li>
+            <li><a href="~/vebinari">Вебинари</a></li>
+            <li><a href="~/pdf/IJPNarudzbenica2.pdf" target="_blank">Претплатите се</a></li>
+            <li><a href="~/Home/Index#kontaktirajteNas">Контакт</a></li>
+        }
+    </ul>
+</nav>

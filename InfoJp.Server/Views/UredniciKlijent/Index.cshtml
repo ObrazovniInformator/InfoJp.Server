@@ -1,0 +1,209 @@
+﻿@model IEnumerable<InfoJp.Server.Models.Urednici>
+
+@{
+    ViewData["Title"] = "Spisak urednika";
+}
+<style>
+    .one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter {
+        margin: 1% !important;
+    }
+
+    .imgover::after {
+        content: none;
+    }
+
+
+
+    .content {
+        opacity: 0;
+        font: 20px Calibri;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #000;
+        background-color: rgba(255,255,255,0.5);
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        -ms-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+        text-align: center;
+    }
+
+        .content:hover {
+            opacity: 1;
+        }
+
+        .content .description {
+            height: 0;
+            opacity: 1;
+            transition-delay: 0.1s;
+            transition-duration: 0.4s;
+        }
+
+        .content:hover .description {
+            opacity: 1;
+            transform: translateY(40px);
+            -webkit-transform: translateY(40px);
+        }
+</style>
+
+<div class="bgded overlay" style="background-image:url(''); ">
+    <div id="pageintro" class="hoc clear" style="height: 30%; padding: 70px 0 70px;">
+        <!-- ################################################################################################ -->
+        <article>
+            <h3 class="heading">ОБЛАСТИ И АУТОРИ</h3>
+        </article>
+        <!-- ################################################################################################ -->
+    </div>
+</div>
+
+
+
+<div class="wrapper gradient">
+    <div class="hoc container clear">
+        <!-- ################################################################################################ -->
+        <div class="sectiontitle">
+            <p class="nospace font-xs">Аутори часописа</p>
+            <h6 class="heading font-x2" style="text-transform: none;">и области које обрађују</h6>
+        </div>
+        <ul class="nospace group team">
+            @foreach (Urednici u in Model)
+            {
+                <li class="one_third">
+                    <figure>
+                        <a class="imgover" href="~/biografija/@u.Id">
+                            <img src="~/images/demo/autoriSlike/@u.Slika" alt="@u.ImeIprezime">
+                            <div class="content">
+                                <div class="description">
+
+                                    @u.SazetakBiografije
+
+                                </div>
+                            </div>
+                        </a>
+                        <figcaption><strong>@u.ImeIprezime</strong> <i>@u.Oblast</i></figcaption>
+                    </figure>
+                </li>
+            }
+            @*<li class="one_third first">
+                <figure>
+                    <a class="imgover" href="#">
+                        <img src="~/images/demo/autoriSlike/Jovana.png" alt="Jovana Jankovic">
+                        <div class="content">
+                            <div class="description">Дипломирани правник на Правном факултету Универзитета у Београду. Главни уредник часописа Информатор јавних предузећа. Један од уредника правне базе Образовног информатора ИнфоЛекс. Један од аутора часописа Буџетски понедељак.  </div>
+                        </div>
+                    </a>
+                    <figcaption><strong>Јована Јанковић</strong> <i>Главни уредник часописа</i></figcaption>
+
+                </figure>
+
+            </li>
+            <li class="one_third">
+                <figure>
+                    <a class="imgover" href="#">
+                        <img src="~/images/demo/autoriSlike/Trandafilovic.png" alt="">
+                        <div class="content">
+                            <div class="description">
+
+                                Од 2010. године прелази у Министарство одбране у Сектор за буџет и финансије где руководи Управом за буџет и заступа помоћника министра за буџет и финансије, где показује значајне резултате на успостављању система финансијског управљања и контроле код буџетских корисника, унапређењу образовног процеса у области јавних финансија  и увођењу програмског буџетирања.
+                                У току радне каријере примио је више значајних признања и одликовања од стране председника Републике и министра одбране.
+
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption><strong>Проф. др Саша Трандафиловић</strong> <i>Из делатности јавних предузећа</i></figcaption>
+                </figure>
+            </li>
+            <li class="one_third">
+                <figure>
+                    <a class="imgover" href="#">
+                        <img src="~/images/demo/autoriSlike/Sneza2.png" alt="Snezana Sokcanic">
+                        <div class="content">
+                            <div class="description">
+                                Дипломирани правник са положеним правосудним испитом.
+                                Преко 20 година радног искуства у државним органима. Од 2010. запослена у Министарству животне средине, рударства и пропсторног планирања на нормативно правним пословима.
+                                Од 2014-2019. У Министарству грађевинарства, саобраћаја и инфраструктуре радила као Руководилац групе за спровођење јавних набавки на великим инфраструктурним пројектима  у друмском, железничком, авио саобраћају и изградњи стамбрних објеката.
+
+
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption><strong>Снежана Шокчанић</strong> <i>Јавне набавке</i></figcaption>
+                </figure>
+            </li>
+            <li class="one_third">
+                <figure>
+                    <a class="imgover" href="#">
+                        <img src="~/images/demo/autoriSlike/Nevena.png" alt="">
+                        <div class="content">
+                            <div class="description">Дипломирани економиста Економског факултета Универзитета у Београду. Један од аутора часописа Буџетско рачуновоство и стручни консултант из области финансија и рачуноводства. </div>
+                        </div>
+                    </a>
+                    <figcaption><strong>Невена Баћковић</strong> <i>Календар пословних обавеза</i></figcaption>
+                </figure>
+            </li>
+
+            <li class="one_third">
+                <figure>
+                    <a class="imgover" href="#">
+                        <img src="~/images/demo/autoriSlike/Aca.png" alt="">
+                        <div class="content">
+                            <div class="description">
+                                Докторирао је 16.04.2021. године на ужој радноправној научној области. Радни однос на Правном факултету Универзитета у Крагујевцу засновао је 01.10.2014. године у звању сарадника у настави.
+                                У звање асистента на ужој радноправној научној области изабран је 01.10.2018. године, а у звање доцента 01.10.2021. године.
+                                Од 01.10.2016. године је радно ангажован као одговорни уредник и правни саветник за област радних односа у привредном друштву „Образовни информатор“.
+                                Радно је ангажован као правни саветник више привредних друштава.
+                                Учествовао је као предавач на више научних скупова.
+                                Аутор је више десетина стручних радова и великог броја научних радова и једног практикума.
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption><strong>Др Александар Антић</strong> <i>Радни односи</i></figcaption>
+                </figure>
+            </li>
+            <li class="one_third">
+                <figure>
+                    <a class="imgover" href="#">
+                        <img src="~/images/demo/autoriSlike/Mira.png" alt="">
+                        <div class="content">
+                            <div class="description">
+                                Специјалиста струковни економиста област Економске науке. Послови: Контрола књижења целокупног финансијског пословања, израда тромесечних извештаја, израда завршних рачуна у складу са вођењем буџетског рачуноводства, планирање средстава буџетског корисника, ликвидатура, платни промет, обрада и подношење ПДВ пријаве. У Образовном информатору један од аутора часописа Буџетско рачуноводство.
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption><strong>Мирјана Јосифовић</strong> <i>Зараде</i></figcaption>
+                </figure>
+            </li>
+            <li class="one_third">
+                <figure>
+                    <a class="imgover" href="#"><img src="~/images/demo/autoriSlike/Aca.png" alt=""></a>
+                    <figcaption><strong>Петар Вујадиновић</strong> <i>Имовински односи</i></figcaption>
+                </figure>
+            </li>
+            <li class="one_third">
+                <figure>
+                    <a class="imgover" href="#"><img src="~/images/demo/autoriSlike/Regina.png" alt=""></a>
+                    <figcaption><strong>Регина Раделић</strong> <i>Финансије и рачуноводство</i></figcaption>
+                </figure>
+            </li>
+            <li class="one_third">
+                <figure>
+                    <a class="imgover" href="#">
+                        <img src="~/images/demo/autoriSlike/Zorica .png" alt="Zorica Kuzmanovic">
+                        <div class="content">
+                            <div class="description">
+                                Дипломирани економиста на Економском факултету Универзитета у Београду.  <br> Радно искуство: "Семе" Београд послове шефа планске службе а након тога и послове финансијског директора.
+                                У Техничкој школи "Дрвоарт" је обављала послове шефа рачуноводства а након тога исте послове обавља на Факултету  безбедности  у Београду.У Предузеће  Образовни информатор прелази да ради 2004. године где више од 15. година обавља послове саветника и уредника за област Порези.  Резултат њеног рада су  хиљаде страна ауторских текстова  и велики број одржаних семинара, обука, радионица, вебинара, као и практикума и приручника у чијој изради је учествовала.
+                            </div>
+                        </div>
+                    </a>
+                    <figcaption><strong>Зорица Кузмановић</strong> <i>Порези</i></figcaption>
+                </figure>
+            </li>*@
+        </ul>
+        <!-- ################################################################################################ -->
+    </div>
+</div>
