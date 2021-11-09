@@ -7,7 +7,7 @@
 
 @section metatags
 {
-   
+
     <meta name="description" content="Informator javnih preduzeca je specijalizovani mesecni casopis javnih preduzeca Srbije kreiran, da bude informativni podsetnik
           i edukativni oslonac u radu javnih preduzeca Srbije." />
     <meta name="keywords" content="Javna preduzeca, javnih preduzeca, javna, javno, casopis, radni odnosi, zarade, javne nabavke, janih nabavki, janim nabavkama, zarade, obrazovni informator, informator, informacije, vesti o javnim preduzecima" />
@@ -86,12 +86,18 @@
         </section>
 
         @*<section id="services" class="hoc container clear">
-            <a href="~/pdf/Prijava_seminar_oktobar_javna preduzeca.pdf" target="_blank"><img src="~/images/demo/Seminari/JP Final - 2 - strana 1.png" style="margin: 0" alt="Susreti Ustanova" /></a> <br />
-            <a href="~/pdf/Prijava_seminar_oktobar_javna preduzeca.pdf" target="_blank"><img src="~/images/demo/Seminari/JP Final - 2 - strana 2.png" style="margin: 0" alt="Susreti Ustanova" /> </a>
+                <a href="~/pdf/Prijava_seminar_oktobar_javna preduzeca.pdf" target="_blank"><img src="~/images/demo/Seminari/JP Final - 2 - strana 1.png" style="margin: 0" alt="Susreti Ustanova" /></a> <br />
+                <a href="~/pdf/Prijava_seminar_oktobar_javna preduzeca.pdf" target="_blank"><img src="~/images/demo/Seminari/JP Final - 2 - strana 2.png" style="margin: 0" alt="Susreti Ustanova" /> </a>
 
-        </section>*@
+            </section>*@
         <br /><br />
+        <p class="heading font-x2" style="text-align: center; color: #5c0909;">
 
+            <a href="https://www.obrazovni.rs/uploads/vebinari/novembar/Kalendar%20vebinara%20novembar%20-%20linkovano.pdf" target="_blank"> <img src="~/images/demo/Vebinari/KalendarVebinaraNovembar.png" alt="KalendarVezinaraNovembar" /> </a>
+
+        </p>
+
+        <br /><br />
         <!-- ################################################################################################ -->
         <!-- ################################################################################################ -->
         <!-- ################################################################################################ -->
@@ -255,49 +261,50 @@
             <h6 class="heading font-x2">Вести</h6>
         </div>
         <ul id="latest" class="nospace group">
-            @for(int i=0; i<3; i++){
-            <li class="one_third">
-                <article>
-                    <a class="imgover" href="~/vest/@vesti[i].Id"><img src="~/images/demo/vestiSlike/@vesti[i].Slika" alt=""></a>
-                    <ul class="nospace meta clear">
-                        <li><i class="fas fa-user"></i> <a href="Vest.html">Особа</a></li>
-                        <li><i class="fas fa-comments"></i> <a href="Vest.html">Коментари</a></li>
-                    </ul>
-                    <div class="excerpt">
-                        <time datetime="01-08-2021">@vesti[i].Datum</time>
-                        <p class="heading"><a href="~/vest1">@vesti[i].Naslov</a></p>
-                    </div>
-                </article>
-            </li>
-            
+            @for (int i = 0; i < 3; i++)
+            {
+                <li class="one_third">
+                    <article>
+                        <a class="imgover" href="~/vest/@vesti[i].Id"><img src="~/images/demo/vestiSlike/@vesti[i].Slika" alt=""></a>
+                        <ul class="nospace meta clear">
+                            <li><i class="fas fa-user"></i> <a href="Vest.html">Особа</a></li>
+                            <li><i class="fas fa-comments"></i> <a href="Vest.html">Коментари</a></li>
+                        </ul>
+                        <div class="excerpt">
+                            <time datetime="01-08-2021">@vesti[i].Datum</time>
+                            <p class="heading"><a href="~/vest1">@vesti[i].Naslov</a></p>
+                        </div>
+                    </article>
+                </li>
+
             }
 
             @*<li class="one_third">
-            <article>
-                <a class="imgover" href="~/vest2"><img src="~/images/demo/SlikaVest2.jpg" alt=""></a>
-                <ul class="nospace meta clear">
-                    <li><i class="fas fa-user"></i> <a href="#">Особа</a></li>
-                    <li><i class="fas fa-comments"></i> <a href="Vest2.html">Коментари</a></li>
-                </ul>
-                <div class="excerpt">
-                    <time datetime="01-08-2021">01.08.2021</time>
-                    <p class="heading"><a href="~/vest2">Привремено обустављена набавка новог система наплате за Инфостан</a></p>
-                </div>
-            </article>
-        </li>
-        <li class="one_third">
-            <article>
-                <a class="imgover" href="~/vest3"><img src="~/images/demo/SlikaVesti3.jpg" alt=""></a>
-                <ul class="nospace meta clear">
-                    <li><i class="fas fa-user"></i> <a href="Vest3.html">Особа</a></li>
-                    <li><i class="fas fa-comments"></i> <a href="Vest3.html">Коментари</a></li>
-                </ul>
-                <div class="excerpt">
-                    <time datetime="01-08-2021">01.08.2021</time>
-                    <p class="heading"><a href="~/vest3">СНС: Од 2012. у нашој држави и граду Новом Саду све је транспарентно.</a></p>
-                </div>
-            </article>
-        </li>*@
+                    <article>
+                        <a class="imgover" href="~/vest2"><img src="~/images/demo/SlikaVest2.jpg" alt=""></a>
+                        <ul class="nospace meta clear">
+                            <li><i class="fas fa-user"></i> <a href="#">Особа</a></li>
+                            <li><i class="fas fa-comments"></i> <a href="Vest2.html">Коментари</a></li>
+                        </ul>
+                        <div class="excerpt">
+                            <time datetime="01-08-2021">01.08.2021</time>
+                            <p class="heading"><a href="~/vest2">Привремено обустављена набавка новог система наплате за Инфостан</a></p>
+                        </div>
+                    </article>
+                </li>
+                <li class="one_third">
+                    <article>
+                        <a class="imgover" href="~/vest3"><img src="~/images/demo/SlikaVesti3.jpg" alt=""></a>
+                        <ul class="nospace meta clear">
+                            <li><i class="fas fa-user"></i> <a href="Vest3.html">Особа</a></li>
+                            <li><i class="fas fa-comments"></i> <a href="Vest3.html">Коментари</a></li>
+                        </ul>
+                        <div class="excerpt">
+                            <time datetime="01-08-2021">01.08.2021</time>
+                            <p class="heading"><a href="~/vest3">СНС: Од 2012. у нашој држави и граду Новом Саду све је транспарентно.</a></p>
+                        </div>
+                    </article>
+                </li>*@
         </ul>
         <!-- ################################################################################################ -->
     </section>
