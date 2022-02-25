@@ -6,6 +6,19 @@
         text-align: center;
         display: block;
     }
+    * {
+        box-sizing: border-box;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    /* Create three equal columns that sits next to each other */
+    .column {
+        flex: 50%;
+        padding: 5px;
+    }
 </style>
 
 <div class="bgded overlay" style="background-color: #560909c2 ">
@@ -21,20 +34,24 @@
 <br />
 @*<h1>ТРЕНУТНО НЕМА ОРГАНИЗОВАНИХ СЕМИНАРА </h1>*@
 <section id="services" class="hoc container clear">
-    <div>
-        <span class="img-container">
-            <img src="~/images/demo/Seminari/Baner_Vrnjacka_banja.png" style="margin: 0" alt="BanerVrnjackaBanja" /><br />
-        </span>
-        <a class="btn btn-lg" style="display:inline-block; background-color: #560909c2;margin-left:45%;margin-top:2%;margin-bottom:2%" target="_blank" href="https://infojp.rs/pdf/Program_seminara_VrnjackaBanja.pdf">ПРОГРАМ</a>
-        <a class="btn btn-lg" style="display: inline-block; background-color: #560909c2; margin-left: 45%; margin-top: 2%; margin-bottom: 2%" target="_blank" href="https://infojp.rs/pdf/Prijava_seminar_23_mart_Vbanja.pdf">ПРИЈАВА</a>
-        <a class="btn btn-lg" style="display: inline-block; background-color: #560909c2; margin-left: 45%; margin-top: 2%; margin-bottom: 2%" target="_blank" href="https://infojp.rs/pdf/USLOVI_UCESCA_sajt_VrnjackaBanja.pdf">УСЛОВИ УЧЕШЋА</a>
-        <span class="img-container">
-            <img src="~/images/demo/Seminari/Baner_Srebrno_jezero.png" style="margin: 0" alt="BanerSrebrnoJezero" /><br />
-        </span>
-        <a class="btn btn-lg" style="display:inline-block; background-color: #560909c2;margin-left:45%;margin-top:2%;margin-bottom:2%" target="_blank" href="https://infojp.rs/pdf/Program_srebrno_jezerо_april_program.pdf">ПРОГРАМ</a>
-        <a class="btn btn-lg" style="display: inline-block; background-color: #560909c2; margin-left: 45%; margin-top: 2%; margin-bottom: 2%" target="_blank" href="https://infojp.rs/pdf/Prijava_srebrno_jezerо_april_prijava.pdf">ПРИЈАВА</a>
-        <a class="btn btn-lg" style="display: inline-block; background-color: #560909c2; margin-left: 45%; margin-top: 2%; margin-bottom: 2%" target="_blank" href="https://infojp.rs/pdf/Seminar_javna_preduzeca_USLOVI_UCESCA.png">УСЛОВИ УЧЕШЋА</a>
-    </div>
+    <div class="row">
+        <div class="column">
+            <span class="img-container">
+                <img src="~/images/demo/Seminari/Baner_Vrnjacka_banja.png" style="margin: 0" alt="BanerVrnjackaBanja" /><br />
+            </span>
+            <a class="btn btn-lg" style="display:inline-block; background-color: #560909c2;margin-left:45%;margin-top:2%;margin-bottom:2%" target="_blank" href="https://infojp.rs/pdf/Program_seminara_VrnjackaBanja.pdf">ПРОГРАМ</a>
+            <a class="btn btn-lg" style="display: inline-block; background-color: #560909c2; margin-left: 45%; margin-top: 2%; margin-bottom: 2%" target="_blank" href="https://infojp.rs/pdf/Prijava_seminar_23_mart_Vbanja.pdf">ПРИЈАВА</a>
+            <a class="btn btn-lg" style="display: inline-block; background-color: #560909c2; margin-left: 45%; margin-top: 2%; margin-bottom: 2%" target="_blank" href="https://infojp.rs/pdf/USLOVI_UCESCA_sajt_VrnjackaBanja.pdf">УСЛОВИ УЧЕШЋА</a>
+        </div>
+        <div class="column">
+            <span class="img-container">
+                <img src="~/images/demo/Seminari/Baner_Srebrno_jezero.png" style="margin: 0" alt="BanerSrebrnoJezero" /><br />
+            </span>
+            <a class="btn btn-lg" style="display:inline-block; background-color: #560909c2;margin-left:45%;margin-top:2%;margin-bottom:2%" target="_blank" href="https://infojp.rs/pdf/Program_srebrno_jezerо_april_program.pdf">ПРОГРАМ</a>
+            <a class="btn btn-lg" style="display: inline-block; background-color: #560909c2; margin-left: 45%; margin-top: 2%; margin-bottom: 2%" target="_blank" href="https://infojp.rs/pdf/Prijava_srebrno_jezerо_april_prijava.pdf">ПРИЈАВА</a>
+            <a class="btn btn-lg" style="display: inline-block; background-color: #560909c2; margin-left: 45%; margin-top: 2%; margin-bottom: 2%" target="_blank" href="https://infojp.rs/pdf/Seminar_javna_preduzeca_USLOVI_UCESCA.png">УСЛОВИ УЧЕШЋА</a>
+        </div>  
+        </div>
     <br />
     <br />
     <img src="~/images/demo/Seminari/radionicaFebruar.png" style="display: block; margin-left: auto; margin-right: auto;" alt="radionicaFebruar" /><br />
