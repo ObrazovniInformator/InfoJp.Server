@@ -10,6 +10,11 @@
     .one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter {
         margin: 0 0 0 1%;
     }
+    .divVest {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+    }
 </style>
 
 <div class="bgded overlay" style="background-image:url('../.././images/demo/backgrounds/VestiSlika.jpg'); ">
@@ -33,7 +38,7 @@
                 <p class="nospace font-xs">Најактуелније</p>
                 <h6 class="heading font-x2">Вести</h6>
             </div>
-            <div style="position:center" class="w3-third w3-container">
+            <div class="divVest">
                 @foreach(Vesti vest in Model)
                 {
 
@@ -51,6 +56,8 @@
 
                  }
             </div>
+
+
             <!-- ################################################################################################ -->
 
 
