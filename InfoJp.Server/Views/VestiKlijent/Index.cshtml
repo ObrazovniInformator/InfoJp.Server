@@ -33,26 +33,24 @@
                 <p class="nospace font-xs">Најактуелније</p>
                 <h6 class="heading font-x2">Вести</h6>
             </div>
-            <ul id="latest" class="nospace group">
+            <div style="position:center" class="w3-third w3-container">
                 @foreach(Vesti vest in Model)
                 {
 
-                    <article class="w3-third w3-container">
-                        <a class="imgover" href="~/vest/@vest.Id"><img src="~/images/demo/vestiSlike/@vest.Slika" alt="@vest.Naslov"></a>
-                        <ul class="nospace meta clear">
-                            <li><i class="fas fa-user"></i> <a href="Vest.html">Особа</a></li>
-                            <li><i class="fas fa-comments"></i> <a href="Vest.html">Коментари</a></li>
-                        </ul>
-                        <div class="excerpt">
-                            <time datetime="@vest.Datum">@vest.Datum</time>
-                            <p class="heading"><a href="~/vest1">@vest.Naslov</a></p>
-                        </div>
-                    </article>
+                <article>
+                    <a class="imgover" href="~/vest/@vest.Id"><img src="~/images/demo/vestiSlike/@vest.Slika" alt="@vest.Naslov"></a>
+                    <ul class="nospace meta clear">
+                        <li><i class="fas fa-user"></i> <a href="Vest.html">Особа</a></li>
+                        <li><i class="fas fa-comments"></i> <a href="Vest.html">Коментари</a></li>
+                    </ul>
+                    <div class="excerpt">
+                        <time datetime="@vest.Datum">@vest.Datum</time>
+                        <p class="heading"><a href="~/vest1">@vest.Naslov</a></p>
+                    </div>
+                </article>
+
                  }
-
-
-
-            </ul>
+            </div>
             <!-- ################################################################################################ -->
 
 
