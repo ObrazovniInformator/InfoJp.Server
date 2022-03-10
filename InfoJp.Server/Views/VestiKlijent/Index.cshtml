@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "Vesti JP";
 }
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
     .one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter {
         margin: 0 0 0 1%;
@@ -33,29 +36,29 @@
             <ul id="latest" class="nospace group">
                 @foreach(Vesti vest in Model)
                 {
-                    <li class="one_half">
-                        <article>
-                            <a class="imgover" href="~/vest/@vest.Id"><img src="~/images/demo/vestiSlike/@vest.Slika" alt="@vest.Naslov"></a>
-                            <ul class="nospace meta clear">
-                                <li><i class="fas fa-user"></i> <a href="Vest.html">Особа</a></li>
-                                <li><i class="fas fa-comments"></i> <a href="Vest.html">Коментари</a></li>
-                            </ul>
-                            <div class="excerpt">
-                                <time datetime="@vest.Datum">@vest.Datum</time>
-                                <p class="heading"><a href="~/vest1">@vest.Naslov</a></p>
-                            </div>
-                        </article>
-                    </li>
+                <li class="w3-third w3-container">
+                    <article>
+                        <a class="imgover" href="~/vest/@vest.Id"><img src="~/images/demo/vestiSlike/@vest.Slika" alt="@vest.Naslov"></a>
+                        <ul class="nospace meta clear">
+                            <li><i class="fas fa-user"></i> <a href="Vest.html">Особа</a></li>
+                            <li><i class="fas fa-comments"></i> <a href="Vest.html">Коментари</a></li>
+                        </ul>
+                        <div class="excerpt">
+                            <time datetime="@vest.Datum">@vest.Datum</time>
+                            <p class="heading"><a href="~/vest1">@vest.Naslov</a></p>
+                        </div>
+                    </article>
+                </li>
                  }
-                
-              
-               
+
+
+
             </ul>
             <!-- ################################################################################################ -->
 
 
-</section>
-        </div>
+        </section>
+    </div>
 
 
 </main>
