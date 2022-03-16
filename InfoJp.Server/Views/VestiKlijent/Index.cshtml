@@ -49,8 +49,7 @@
                         <li><i class="fas fa-comments"></i> <a href="Vest.html">Коментари</a></li>
                     </ul>
                     <div class="excerpt">
-                        @*<datetime datetime="@vest.Datum">@vest.Datum</datetime>*@
-                        <input asp-for="@vest.Datum" type="date" asp-format="{0:dd-MM-yyyy}" class="form-control" />
+                        <time datetime="DD-MM-YYYYThh:mm:ssTZD">@vest.Datum</time>
                         <p class="heading"><a href="~/vest1"><b>@vest.Naslov</b></a></p>
                     </div>
                 </article>
