@@ -28,7 +28,7 @@ document.getElementById("demo").innerHTML = d;
                                                                                                                  <div class="excerpt">
                                                                                                                      <br>
                                                                                                                      <time datetime="01-08-2021">@Model.Datum</time><br><br>
-                                                                                                                     <input type="text" asp-for="Model.Datum" class="form-control" data-provide="datepicker" data-date-autoclose="true" data-date-format="dd-mm-yyyy">
+                                                                                                                     <input type="text" asp-for="@Model.Datum" class="form-control" data-provide="datepicker" data-date-autoclose="true" data-date-format="dd-mm-yyyy">
                                                                                                                      <p class="heading"><a href="#">@Model.Naslov</a></p>
                                                                                                                  </div>
            @Html.Raw(@Model.Teskst)
