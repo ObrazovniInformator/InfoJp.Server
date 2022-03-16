@@ -22,7 +22,7 @@
             <a class="imgover" href="#"><img src="~/images/demo/vestiSlike/@Model.Slika" alt="@Model.Naslov"></a><br>
             <div class="excerpt">
                 <br>
-                <time datetime="01-08-2021">@Model.Datum</time><br><br>
+                <time datetime="01-08-2021">@Convert.ToString(string.Format("{0:dd/MM/yyyy}", ) Model.Datum)</time><br><br>
                 <p class="heading"><a href="#">@Model.Naslov</a></p>
             </div>
            @Html.Raw(@Model.Teskst)
