@@ -15,9 +15,6 @@ namespace InfoJp.Server.Controllers
         public IActionResult Index()
         {
             List<Vesti> vesti = _context.Vestis.OrderByDescending(e => e.Id).ToList();
-
-            DateTime date = new DateTime();
-            string strDate = date.ToString("dd/MM/yyyy");
             return View(vesti);
         }
 
