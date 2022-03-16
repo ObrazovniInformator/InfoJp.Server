@@ -25,12 +25,13 @@ document.getElementById("demo").innerHTML = d;
     <main class="hoc container clear">
         <article style="margin-left: 20%; margin-right:20%">
             <a class="imgover" href="#"><img src="~/images/demo/vestiSlike/@Model.Slika" alt="@Model.Naslov"></a><br>
-                                                                                                                 <div class="excerpt">
-                                                                                                                     <br>
-                                                                                                                     <time datetime="01-08-2021">@Model.Datum</time><br><br>
-                                                                                                                     <input type="text" asp-for="@Model.Datum" class="form-control" data-provide="datepicker" data-date-autoclose="true" data-date-format="dd-mm-yyyy">
-                                                                                                                     <p class="heading"><a href="#">@Model.Naslov</a></p>
-                                                                                                                 </div>
+            <div class="excerpt">
+                <br>
+                @*<time datetime="01-08-2021">@Model.Datum</time><br><br>*@
+                <input type="datetime-local" asp-for="@Model.Datum" data-provide="datepicker" data-date-autoclose="true" data-date-format="dd/mm/yyyy">
+                <br>
+                <p class="heading"><a href="#">@Model.Naslov</a></p>
+            </div>
            @Html.Raw(@Model.Teskst)
             <div>
         </article>
