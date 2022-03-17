@@ -293,7 +293,8 @@
                             <li><i class="fas fa-comments"></i> <a href="Vest.html">Коментари</a></li>
                         </ul>
                         <div class="excerpt">
-                            <time datetime="01-08-2021">@vesti[i].Datum</time>
+                            @*<time datetime="01-08-2021">@vesti[i].Datum</time>*@
+                            <input type="text" asp-for="@vesti[i].Datum" readonly class="form-control" data-provide="datepicker" data-date-autoclose="true" data-date-format="dd/mm/yyyy">
                             <p class="heading"><a href="~/vest1">@vesti[i].Naslov</a></p>
                         </div>
                     </article>
