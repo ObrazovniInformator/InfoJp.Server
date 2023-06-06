@@ -13,5 +13,6 @@ namespace InfoJp.Server.Models
         public string Slika { get; set; }
         public string SazetakBiografije { get; set; }
         public string Biografija { get; set; }
+        public int RedniBroj { get; set; }
     }
 }

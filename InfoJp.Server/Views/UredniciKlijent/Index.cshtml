@@ -70,7 +70,7 @@
             <h6 class="heading font-x2" style="text-transform: none;">и области које обрађују</h6>
         </div>
         <ul class="nospace group team">
-            @foreach (Urednici u in Model)
+            @foreach (Urednici u in Model.OrderBy(m=>m.RedniBroj))
             {
                 <li class="two_quarter">
                     <figure>
