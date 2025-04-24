@@ -74,16 +74,18 @@
             {
                 <li class=".one_half">
                     <figure>
-                        <a class="imgover" href="~/biografija/@u.Id">
-                            <img src="~/images/demo/autoriSlike/@u.Slika" alt="@u.ImeIprezime">
-                            <div class="content">
-                                <div class="description">
-
-                                    @u.SazetakBiografije
-
+                        @if (!string.IsNullOrWhiteSpace(u.Slika) && !string.IsNullOrWhiteSpace(u.SazetakBiografije))
+                        {
+                            <a class="imgover" href="~/biografija/@u.Id">
+                                <img src="~/images/demo/autoriSlike/@u.Slika" alt="@u.ImeIprezime"
+                                     onerror="this.style.display='none';" />
+                                <div class="content">
+                                    <div class="description">
+                                        @u.SazetakBiografije
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        }
                         <figcaption><strong>@u.ImeIprezime</strong> <i>@u.Oblast</i></figcaption>
                     </figure>
                 </li>
